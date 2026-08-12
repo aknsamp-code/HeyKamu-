@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hey Kamu!</title>
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="img/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         OPENING
+    ========================== -->
+
+    <section class="screen active" id="opening">
+
+        <div class="emoji">👀</div>
+
+        <h1>
+            EH UPAH...
+        </h1>
+
+        <p>
+            Ada sesuatu yang harus upah lihat.
+        </p>
+
+        <button onclick="startPrank()">
+            BUKA 😳
+        </button>
+
+        <small>
+            Tenang... nggak serem kok.
+        </small>
+
+    </section>
+
+    <!-- =========================
+         PHOTO SECTION
+    ========================== -->
+    <section class="screen" id="photoScreen">
+
+        <!-- Tombol navigasi foto -->
+        <div class="photo-nav">
+
+            <button
+                class="back-btn"
+                onclick="backToStart()">
+                ← Awal
+            </button>
+
+            <button
+                class="prev-btn"
+                onclick="previousPhoto()">
+                ← Sebelumnya
+            </button>
+
+        </div>
+
+
+        <!-- Nomor foto -->
+        <div class="counter" id="counter">
+            1 / 4
+        </div>
+
+
+        <!-- Foto -->
+        <div class="photo-container">
+
+            <img
+                id="prankPhoto"
+                src="img/Screenshot_19.png"
+                alt="Foto"
+            >
+
+        </div>
+
+
+        <!-- Judul -->
+        <h2 id="photoTitle">
+            WADUH... 😭
+        </h2>
+
+
+        <!-- Keterangan -->
+        <p id="photoText">
+            Ternyata dari kecil sudah begini.
+        </p>
+
+
+        <!-- Tombol lanjut -->
+        <button
+            id="nextButton"
+            onclick="nextPhoto()">
+            Lihat lagi →
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         FINAL
+    ========================== -->
+    <section class="screen" id="finalScreen">
+
+        <div class="final-emoji">
+            💀
+        </div>
+
+        <h1>
+            OKE CUKUP.
+        </h1>
+
+        <p>
+            Sebelum foto-foto ini Lanjut Semangat Buat hari harinya yahh
+        </p>
+
+        <button onclick="showBirthday()">
+            Ada sesuatu lagi...
+        </button>
+
+        <br>
+
+        <button
+            class="secondary-btn"
+            onclick="backToStart()">
+            ← Balik ke awal
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         BIRTHDAY
+    ========================== -->
+    <section
+        class="screen birthday"
+        id="birthdayScreen">
+
+        <div class="confetti">
+            🎉
+        </div>
+
+        <h1>
+            SELAMAT ULANG TAHUN! 🎂
+        </h1>
+
+        <p class="birthday-text">
+
+            Sorry yahh... Ijal gak bisa
+            kasih apa apa buat ulang tahun
+            upah ouh iya ijal cuma bisa kasih
+            doa sama harapan yang terbaik buat upah
+
+        </p>
+
+
+        <div class="joke">
+
+            <span>
+                Oh iya...
+            </span>
+
+            <strong>
+                Foto-foto tadi jangan marah ya 😭
+            </strong>
+
+        </div>
+
+
+        <p class="ending">
+
+            Anggap aja ini hadiah ulang tahun
+            ijal buat upah , yey semakin dewasa yahh
+
+        </p>
+
+
+        <!-- Tombol yang membawa ke prank terakhir -->
+        <button
+            class="secondary-btn"
+            onclick="showKepo()">
+
+            🔄 Lihat dari awal lagi
+
+        </button>
+
+    </section>
+
+
+    <!-- =========================
+         KEPO / PRANK TERAKHIR
+    ========================== -->
+    <section
+        class="screen"
+        id="kepoScreen">
+
+        <div class="kepo-emoji">
+            👀
+        </div>
+
+        <h1>
+            IHHH KOK KEPO SIHHH 😭
+        </h1>
+
+        <p>
+            Udah sampai sini masih mau lihat lagi?
+        </p>
+
+
+        <div class="tadaa">
+
+            <strong>
+                TADAAAAA 🎉
+            </strong>
+
+            <span>
+                Nggak bisa dilihat lagi HAHAHAHA 💀
+            </span>
+
+        </div>
+
+
+        <button onclick="backToStart()">
+            Yaudah deh 😭
+        </button>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

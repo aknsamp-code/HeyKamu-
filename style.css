@@ -1,0 +1,681 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #252525,
+            #0b0b0b 70%
+        );
+
+    color: white;
+
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* =========================
+   SCREEN
+========================= */
+
+.screen {
+    position: fixed;
+
+    inset: 0;
+
+    display: none;
+
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    animation: fadeIn .5s ease;
+}
+
+.screen.active {
+    display: flex;
+}
+
+
+
+/* =========================
+   OPENING BACKGROUND
+========================= */
+
+#opening {
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.75)
+        ),
+        url("img/Fantasy Girl Resting Under Tree Monochrome Live Wallpaper__.jpg");
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+}
+
+/* =========================
+   OPENING
+========================= */
+
+.emoji {
+    font-size: 70px;
+
+    margin-bottom: 20px;
+
+    animation: floating 2s infinite ease-in-out;
+}
+
+h1 {
+    font-size: clamp(35px, 8vw, 65px);
+
+    font-weight: 900;
+
+    margin-bottom: 20px;
+}
+
+.screen p {
+    color: #bdbdbd;
+
+    font-size: 17px;
+
+    max-width: 500px;
+
+    line-height: 1.6;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+button {
+    border: none;
+
+    background: white;
+
+    color: #111;
+
+    padding: 15px 30px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        opacity .2s ease;
+}
+
+button:hover {
+    transform: scale(1.08);
+}
+
+button:active {
+    transform: scale(.95);
+}
+
+small {
+    margin-top: 18px;
+
+    color: #666;
+}
+
+
+/* =========================
+   PHOTO NAVIGATION
+========================= */
+
+.photo-nav {
+    position: absolute;
+
+    top: 25px;
+
+    left: 20px;
+    right: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    z-index: 10;
+
+    pointer-events: none;
+}
+
+.photo-nav button {
+    pointer-events: auto;
+
+    background: rgba(255, 255, 255, .08);
+
+    color: #ddd;
+
+    border: 1px solid #333;
+
+    padding: 9px 14px;
+
+    font-size: 12px;
+
+    backdrop-filter: blur(10px);
+}
+
+.photo-nav button:hover {
+    background: rgba(255, 255, 255, .15);
+
+    transform: none;
+}
+
+
+/* =========================
+   PHOTO COUNTER
+========================= */
+
+.counter {
+    position: absolute;
+
+    top: 75px;
+
+    font-size: 13px;
+
+    color: #777;
+
+    letter-spacing: 2px;
+
+    z-index: 5;
+}
+
+
+/* =========================
+   PHOTO
+========================= */
+
+.photo-container {
+    width: min(88vw, 420px);
+
+    height: min(60vh, 500px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #161616;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, .5);
+}
+
+.photo-container img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    animation: photoIn .5s ease;
+}
+
+#photoTitle {
+    font-size: 30px;
+
+    margin-bottom: 10px;
+}
+
+#photoText {
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final-emoji {
+    font-size: 90px;
+
+    margin-bottom: 20px;
+
+    animation: shake .5s infinite;
+}
+
+.final p {
+    max-width: 500px;
+}
+
+
+/* =========================
+   SECONDARY BUTTON
+========================= */
+
+.secondary-btn {
+    margin-top: 10px;
+
+    background: rgba(255, 255, 255, .08);
+
+    color: #aaa;
+
+    border: 1px solid #333;
+}
+
+.secondary-btn:hover {
+    background: rgba(255, 255, 255, .15);
+
+    color: white;
+}
+
+
+/* =========================
+   BIRTHDAY
+========================= */
+
+.birthday {
+    background:
+        radial-gradient(
+            circle at center,
+            #292929,
+            #080808 70%
+        );
+}
+
+.confetti {
+    font-size: 80px;
+
+    margin-bottom: 20px;
+
+    animation: floating 2s infinite ease-in-out;
+}
+
+.birthday h1 {
+    font-size: clamp(32px, 7vw, 60px);
+
+    background: linear-gradient(
+        90deg,
+        #fff,
+        #ffd86b,
+        #fff
+    );
+
+    background-size: 200%;
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+
+    animation: shine 3s infinite;
+}
+
+.birthday-text {
+    max-width: 600px !important;
+
+    color: #ddd !important;
+}
+
+.joke {
+    margin-top: 15px;
+
+    padding: 20px 30px;
+
+    border: 1px solid #333;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, .04);
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+.joke span {
+    color: #777;
+}
+
+.joke strong {
+    font-size: 18px;
+}
+
+.ending {
+    margin-top: 25px;
+
+    font-size: 14px !important;
+
+    color: #777 !important;
+}
+
+
+/* =========================
+   KEPO SCREEN
+========================= */
+
+.kepo-emoji {
+    font-size: 90px;
+
+    margin-bottom: 20px;
+
+    animation: floating 2s infinite ease-in-out;
+}
+
+.kepo-emoji + h1 {
+    font-size: clamp(32px, 7vw, 60px);
+}
+
+.tadaa {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding: 20px 30px;
+
+    margin: 10px 0 25px;
+
+    border: 1px solid #333;
+
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, .04);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, .25);
+}
+
+.tadaa strong {
+    font-size: 30px;
+
+    color: #ffd86b;
+}
+
+.tadaa span {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform: scale(.97);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+
+@keyframes photoIn {
+
+    from {
+        opacity: 0;
+
+        transform: scale(.9);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: scale(1);
+    }
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: rotate(0);
+    }
+
+    25% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+}
+
+
+@keyframes shine {
+
+    0% {
+        background-position: 0%;
+    }
+
+    50% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 0%;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+
+    #opening {
+    background-size: cover;
+
+    background-position: center center;
+    }
+    
+    .screen {
+        padding: 20px 18px;
+    }
+
+
+    .emoji {
+        font-size: 60px;
+    }
+
+
+    h1 {
+        font-size: 38px;
+    }
+
+
+    .screen p {
+        font-size: 15px;
+    }
+
+
+    button {
+        padding: 14px 25px;
+
+        font-size: 14px;
+    }
+
+
+    /* PHOTO */
+
+    .photo-container {
+        width: 92vw;
+
+        height: 55vh;
+
+        border-radius: 16px;
+
+        margin-bottom: 20px;
+    }
+
+
+    .photo-container img {
+        object-fit: contain;
+    }
+
+
+    /* NAVIGASI */
+
+    .photo-nav {
+        top: 18px;
+
+        left: 15px;
+        right: 15px;
+    }
+
+
+    .photo-nav button {
+        padding: 8px 11px;
+
+        font-size: 11px;
+    }
+
+
+    .counter {
+        top: 65px;
+
+        font-size: 12px;
+    }
+
+
+    #photoTitle {
+        font-size: 23px;
+
+        margin-bottom: 7px;
+    }
+
+
+    #photoText {
+        font-size: 14px;
+
+        margin-bottom: 15px;
+    }
+
+
+    #nextButton {
+        padding: 13px 22px;
+    }
+
+
+    /* FINAL */
+
+    .final-emoji {
+        font-size: 75px;
+    }
+
+
+    /* BIRTHDAY */
+
+    .confetti {
+        font-size: 65px;
+    }
+
+
+    .birthday h1 {
+        font-size: 34px;
+    }
+
+
+    .birthday-text {
+        font-size: 15px !important;
+    }
+
+
+    .joke {
+        padding: 17px 20px;
+    }
+
+
+    .joke strong {
+        font-size: 16px;
+    }
+
+
+    .ending {
+        font-size: 13px !important;
+    }
+
+
+    /* KEPO */
+
+    .kepo-emoji {
+        font-size: 70px;
+    }
+
+
+    .kepo-emoji + h1 {
+        font-size: 34px;
+    }
+
+
+    .tadaa {
+        padding: 17px 20px;
+
+        margin-top: 5px;
+    }
+
+
+    .tadaa strong {
+        font-size: 25px;
+    }
+
+
+    .tadaa span {
+        font-size: 13px;
+    }
+
+}
